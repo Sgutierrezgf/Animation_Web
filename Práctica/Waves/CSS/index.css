@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+.container{
+    height: 500px;
+    background: #0f9bf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* overflow: hidden; */
+}
+.content{
+    font-family: Arial;
+    text-align: center;
+    font-size: 2em;
+    color: rgba(255, 255, 255, .8)
+}
+.waves {
+    position: absolute;
+    overflow: hidden;
+    bottom: -135px;
+    height: 527px;
+    width: 100%;
+    /* left: 0;
+    right: 0;
+    top: 200px;
+    bottom: 0; */
+}
+.wave {
+    position: absolute;
+    left: -300px;
+    bottom: 0;
+    /* height: 200px; */
+    /* width: 100%; */
+    /* width: 200px; */
+    /* border-radius: 50%; */
+    /* background: rgba(0, 0, 0, .3); */
+    width: 2402px;
+    height: 427px;
+    background: url(../waves.png) center bottom no-repeat;
+    animation: 5s wave ease-in-out infinite alternate;
+}
+.wave.a{
+    background-position: 0 -854px;
+}
+.wave.b{
+    background-position: 0 -427px;
+    animation-delay: .6s;
+}
+.wave.c{
+    background-position: 0 0;
+    animation-delay: 1.2s;
+}
+/* .container {
+    position: absolute;
+} */
+@keyframes wave{
+    0%{
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translate(-80px, 30px);
+    }
+    100%{
+        transform: translate(260px, -60px);
+    }
+}
